@@ -48,8 +48,9 @@ body {
 	margin: 0 auto;
 }
 
-#signature {
-	margin: 0 auto;
+#signature-preview {
+display: flex;
+justify-content: center;
 }
 
 .input-label-group {
