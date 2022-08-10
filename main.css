@@ -1,3 +1,7 @@
+html {
+	width: 100vw;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	margin: 0px;
@@ -15,7 +19,9 @@ body {
 	display: flex;
 	width: 100vw;
 	height: calc(100vh - 90px);
+
 }
+
 
 #signature-info {
 	position: relative;
@@ -31,6 +37,8 @@ body {
 .right-side {
 	width: 50%;
 }
+
+
 
 .right-side h1 {
 	width: 100%;
@@ -136,4 +144,36 @@ input:focus + label, input.ng-not-empty + label {
 	border: 1px solid black;
 	margin: 40px;
 	padding: 20px;
+}
+
+
+@media  (max-width: 700px) {
+	.header-h1 {
+		padding-top: 20px;
+		border-bottom: 1px solid black;
+		height: 50px;
+		font-size: 25px;
+		text-align: center;
+		margin: 0px;
+	}
+	#main {
+		display: flex;
+		flex-direction: column;
+		width: 100vw ;
+		height: calc(100vh - 90px);
+	
+	}
+	.right-side {
+		width: 100%;
+	}
+	#signature-info {
+		position: relative;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 20px;
+		width: 92%;
+		border-right: 0px solid black;
+	}
 }
