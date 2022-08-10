@@ -11,11 +11,11 @@
 	<script type="text/javascript" src="app.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<link rel="shortcut icon" href="http://sparxoo.com/wp-content/uploads/2018/09/Sparxoo-logo.png">
+	<link rel="shortcut icon" href="https://i.imgur.com/NpgYV7K.png">
 	<title>Signature Generator</title>
 </head>
 <body ng-controller="mainController as main" ng-cloak>
-	<h1 class="header-h1">SPP Email Signature Generator</h1>
+	<h1 class="header-h1">Press Email Signature Generator</h1>
 	<div id="main">
 
 		<form id="signature-info" ng-submit="main.submit()">
@@ -29,12 +29,9 @@
 			</div>
 			<div class="input-label-group">
 				<input type="tel" ng-model="main.office" id="office" required>
-				<label for="office">Office Phone</label>
+				<label for="office">Phone Number</label>
 			</div>
-			<div class="input-label-group">
-				<input type="tel" ng-model="main.mobile" id="mobile" required>
-				<label for="mobile">Mobile Phone</label>
-			</div>
+		
 			<button class="btn" data-clipboard-target="#signature-preview">Copy Signature!</button>
 		</form>
 
@@ -69,18 +66,19 @@
 		<h1>Preview</h1>
 		<div id="signature-preview">
 
-			<table id="signature"  style="font-family: 'Helvetica';">
+			<table id="signature"  style="font-family: 'Roboto' sans-serif;">
 				<tr>
-					<td style="text-align: center; border-right: 1px solid black; padding: 0px">
+					<td style="text-align: center; border-right: 1px solid #e94a57;; padding: 0px ;padding-right: 20px;">
 						<br>
-						<img src="https://i.imgur.com/XweXPH5.png" width="60"><br>
-						<img src="https://i.imgur.com/n1ApUf0.png" width="140">
+
+						<img src="https://i.imgur.com/NpgYV7K.png" width="80">
+						
 					</td>
-					<td style="padding:0px 10px;">
+					<td style="padding:0px 15px;">
 						<table>
 							<tr style="height: 25px;  padding-bottom: 0px;">
 								<td style="height: 25px;  padding-bottom: 0px;">
-									<div><b style="font-size: 25px; height: 28px; display: block; padding-bottom: 0px;">{{main.name || 'Your Name'}}</b></div>
+									<div style="font-size: 25px; height: 28px; display: block; padding-bottom: 0px; font-weight: 600;">{{main.name || 'Your Name'}}</div>
 								</td>
 							</tr>
 							<tr style="height: 15px; padding-top: 0px;">
@@ -93,39 +91,20 @@
 									<div style="padding-top: 5px;"></div>
 								</td>
 							</tr>
+							
 							<tr>
 								<td>
-									<div style="font-size: 10px; height: 10px;"><b>Strategic Property Partners, LLC</b></div>
+									<div style="height: 5px;"></div>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<div style="font-size: 10px;  height: 10px;">401 E Jackson St, 33rd Floor</div>
+									<div style="font-size: 10px; height: 10px;">Phone: <span style="color:#e94a57;">{{main.office || '813.123.4567'}}</span></div>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<div style="font-size: 10px; height: 10px;">Tampa, FL 33602</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div style="height: 10px;"></div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div style="font-size: 10px; height: 10px;">Office: <span style="color:#808080;">{{main.office || '813.123.4567'}}</span></div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div style="font-size: 10px; height: 10px;">Mobile: <span style="color:#808080;">{{main.mobile || '813.123.4567'}}</span></div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div style="font-size: 10px; height: 18px;">Website: <span style="color:#808080;"><a href="www.waterstreettampa.com">www.waterstreettampa.com</a></span></div>
+									<div style="font-size: 10px; height: 18px;"><span style="color:#e94a57;"><a  style="color:#e94a57;" href="www.pressmarketing.com">www.pressmarketing.com</a></span> </div>
 								</td>
 							</tr>
 						</table>
